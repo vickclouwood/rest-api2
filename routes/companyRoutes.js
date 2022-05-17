@@ -26,9 +26,7 @@ router.post("/fetchCompanies", (req, res) => {
   //     });
   // });
 
-  const document = database
-    .collection("company")
-    .find({ _id: _id, seed: seed });
+  const document = database.collection("users").find({ _id: _id, seed: seed });
   console.log(document);
 
   if (document) {
